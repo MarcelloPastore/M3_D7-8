@@ -1,0 +1,107 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+/* creo una sezione di css per la navbar e gli item in essa contenuti "NAVBAR"*/
+.bi-search {
+    color: #ffffff;
+  }
+
+.bi-bell-fill {
+    color: #ffffff;
+    padding-right: 10px;
+}
+.rightCont {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    float: right;
+}
+.rightCont > div > span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* end "NAVBAR" */
+
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.cardHover {
+  background: linear-gradient(to right, #464545, #4645453f, #00000000);
+  opacity: 0;
+  top: -200px;
+  position: absolute;
+  overflow: hidden;
+}
+.card:hover .cardHover {
+  opacity: 1;
+  top: 0;
+  transition: 0.4s ease;
+  transition-delay: 0.4s;
+}
+
+/* footer sec */
+
+.link-utili a {
+  color: lightgray;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.link-utili a:hover {
+  color: #ffffff;
+}
+
+.wrapper-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.wrapper-links a {
+  text-decoration: none;
+  color: lightgray;
+  font-size: 0.7rem;
+}
+.wrapper-links a:hover {
+  color: #ffffff;
+}
+
+/* footer end */
+
+
+
+
+/* animation */
+@keyframes enter-animation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .image-animation {
+    animation: enter-animation 1.5s 1;
+  }
+}
